@@ -9,11 +9,11 @@ import Container from "react-bootstrap/Container"
 const AllMyBooks=()=>{
     return(
         <Container fluid>
-        <Row>{
+        <Row className="justify-content-around">{
             items.map((book) => {
                return(
                 // <Stack gap={3}>
-                    <Col className="px-0 mb-5 flex-grow-0 justify-content-around">
+                    <Col className="px-0 mb-5 flex-grow-0" key={book.asin}>
                     <Card style={{ width: '18rem' }} >
                     <Card.Img variant="top" src={book.img} className="object-fit-cover"style={{ height: '25rem' }}/>
                         <Card.Body style={{height: "17em"}}>
